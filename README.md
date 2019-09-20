@@ -17,7 +17,8 @@
 
 这里也贴出一份摘抄的悬浮窗的使用方式：
 
-# 特性：
+## 特性：
+
 1.支持拖动，提供自动贴边等动画
 
 2.内部自动进行权限申请操作
@@ -36,6 +37,7 @@
 
 
 # 权限声明：
+
  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
  
  
@@ -61,8 +63,9 @@
              .setFilter(false, B_Activity.class)
 此方法表示 B_Activity 隐藏悬浮窗，其他界面显示。
 
-注意：setFilter 方法参数可以识别该 Activity 的子类。也就是说，如果 A_Activity、C_Activity 继承自 BaseActivity，你可以这样设置：
              .setFilter(true, BaseActivity.class)
+注意：setFilter 方法参数可以识别该 Activity 的子类。也就是说，如果 A_Activity、C_Activity 继承自 BaseActivity，你可以这样设置.
+            
               
 # 可拖动悬浮窗及回弹动画
 
