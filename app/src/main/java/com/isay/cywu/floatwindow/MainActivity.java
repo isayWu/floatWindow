@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         findViewById(R.id.btn_apply_permission).setOnClickListener(this);
         findViewById(R.id.btn_open_float_window).setOnClickListener(this);
+        findViewById(R.id.btn_hide_float_window).setOnClickListener(this);
+        findViewById(R.id.btn_show_float_window).setOnClickListener(this);
         findViewById(R.id.btn_close_float_window).setOnClickListener(this);
         findViewById(R.id.btn_open_service).setOnClickListener(this);
     }
@@ -41,6 +43,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_open_float_window:
                 openFloatWindow();
+                break;
+            case R.id.btn_hide_float_window:
+                hideFloatWindow();
+                break;
+            case R.id.btn_show_float_window:
+                showFloatWindow();
                 break;
             case R.id.btn_close_float_window:
                 closeFloatWindow();
@@ -66,10 +74,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
+    //隐藏悬浮窗
+    private void hideFloatWindow() {
+        if (FloatWindow.get() != null) {
+            FloatWindow.get().hide();
+        }
+    }
+
+    //显示悬浮窗
+    private void showFloatWindow() {
+        if (FloatWindow.get() != null) {
+            FloatWindow.get().show();
+        }
+    }
+
     //关闭悬浮窗
     private void closeFloatWindow() {
         if (FloatWindow.get() != null) {
-            FloatWindow.get().hide();
+            FloatWindow.destroy();
         }
     }
 
