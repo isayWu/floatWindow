@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btn_apply_permission"
+        android:layout_width="100dp"
+        android:layout_height="42dp"
+        android:layout_margin="14dp"
+        android:background="#f5f5f5"
+        android:gravity="center"
+        android:text="1 申请权限" />
+
+
+    <Button
+        android:id="@+id/btn_open_float_window"
+        android:layout_width="100dp"
+        android:layout_height="42dp"
+        android:layout_margin="14dp"
+        android:background="#f5f5f5"
+        android:gravity="center"
+        android:text="2 开启悬浮窗" />
+
+
+    <Button
+        android:id="@+id/btn_close_float_window"
+        android:layout_width="100dp"
+        android:layout_height="42dp"
+        android:layout_margin="14dp"
+        android:background="#f5f5f5"
+        android:gravity="center"
+        android:text="3 关闭悬浮窗" />
+
+    <Button
+        android:id="@+id/btn_open_service"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_margin="14dp"
+        android:background="#f5f5f5"
+        android:gravity="center"
+        android:text="4 开启前台服务，提高app优先级" />
+
+</LinearLayout>
