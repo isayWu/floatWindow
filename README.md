@@ -36,12 +36,12 @@
 8.链式调用，简洁清爽
 
 
-# 权限声明：
+## 权限声明：
 
  <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
  
  
-# 基础使用
+## 基础使用
 
       FloatWindow
            .with(getApplicationContext())
@@ -55,7 +55,7 @@
            .setPermissionListener(mPermissionListener)  //监听权限申请结果
            .build();
               
-# 指定界面显示
+## 指定界面显示
 
              .setFilter(true, A_Activity.class, C_Activity.class)
 此方法表示 A_Activity、C_Activity 显示悬浮窗，其他界面隐藏。
@@ -67,12 +67,12 @@
 注意：setFilter 方法参数可以识别该 Activity 的子类。也就是说，如果 A_Activity、C_Activity 继承自 BaseActivity，你可以这样设置.
             
               
-# 可拖动悬浮窗及回弹动画
+## 可拖动悬浮窗及回弹动画
 
               .setMoveType(MoveType.slide)
               .setMoveStyle(500, new AccelerateInterpolator())  //贴边动画时长为500ms，加速插值器
 
-# 共提供 4 种 MoveType :
+## 共提供 4 种 MoveType :
 
       MoveType.slide : 可拖动，释放后自动贴边 （默认）
 
@@ -84,7 +84,7 @@
 
       setMoveStyle 方法可设置动画效果，只在 MoveType.slide 或 MoveType.back 模式下设置此项才有意义。默认减速插值器，默认动画时长为 300ms。
 
-# 后续操作
+## 后续操作
 
       //手动控制
       FloatWindow.get().show();
@@ -99,7 +99,7 @@
       以上操作应待悬浮窗初始化后进行。
 
 
-# 多个悬浮窗
+## 多个悬浮窗
 
       FloatWindow
               .with(getApplicationContext())
