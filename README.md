@@ -10,7 +10,7 @@
 
 演示图：
  
-![image](https://github.com/isayWu/floatWindow/blob/master/images/demo.gif)
+![image](https://github.com/isayWu/floatWindow/blob/master/images/demo_2.gif)
 
 
 以下是悬浮的使用方式，完成参考@yhaolpz的github项目：  https://github.com/yhaolpz/FloatWindow 
@@ -69,54 +69,4 @@
               
 ## 可拖动悬浮窗及回弹动画
 
-              .setMoveType(MoveType.slide)
-              .setMoveStyle(500, new AccelerateInterpolator())  //贴边动画时长为500ms，加速插值器
-
-## 共提供 4 种 MoveType :
-
-      MoveType.slide : 可拖动，释放后自动贴边 （默认）
-
-      MoveType.back : 可拖动，释放后自动回到原位置
-
-      MoveType.active : 可拖动
-
-      MoveType.inactive : 不可拖动
-
-      setMoveStyle 方法可设置动画效果，只在 MoveType.slide 或 MoveType.back 模式下设置此项才有意义。默认减速插值器，默认动画时长为 300ms。
-
-## 后续操作
-
-      //手动控制
-      FloatWindow.get().show();
-      FloatWindow.get().hide();
-
-      //修改显示位置
-      FloatWindow.get().updateX(100);
-      FloatWindow.get().updateY(100);
-
-      //销毁
-      FloatWindow.destroy();
-      以上操作应待悬浮窗初始化后进行。
-
-
-## 多个悬浮窗
-
-      FloatWindow
-              .with(getApplicationContext())
-              .setView(imageView)
-              .build();
-
-      FloatWindow
-              .with(getApplicationContext())
-              .setView(button)
-              .setTag("new")
-              .build();
-
-
-      FloatWindow.get("new").show();
-      FloatWindow.get("new").hide();
-      FloatWindow.destroy("new");
-        
-创建第一个悬浮窗不需加 tag，之后再创建就需指定唯一 tag ，以此区分，方便进行后续操作。        
-              
-
+              .setMoveType(MoveType
